@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Function7"/>
+        <attribute name="authors" value="MUHAMMAD AYDIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-15 12:29:53 AM"/>
+        <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTU7MTI6MTg6MTggQU07MzM4OA=="/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTU7MTI6Mjk6NTMgQU07MTszNDk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="itemName" type="String" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <input variable="itemName"/>
+            <input variable="quantity"/>
+            <input variable="price"/>
+            <call expression="PrintReceiptLine(itemName, quantity, price)"/>
+        </body>
+    </function>
+    <function name="PrintReceiptLine" type="None" variable="">
+        <parameters>
+            <parameter name="itemName" type="String" array="False"/>
+            <parameter name="quantity" type="Integer" array="False"/>
+            <parameter name="price" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="price*quantity"/>
+            <output expression="&quot;=== RECEIPT PRINTER ===&quot;" newline="True"/>
+            <output expression="&quot;Calling PrintReceiptLine (&quot;&amp;itemName&amp;&quot;, &quot;&amp;quantity&amp;&quot;, &quot;&amp;price&amp;&quot;)&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;itemName&amp;&quot; x &quot;&amp;quantity&amp;&quot; RP&quot;&amp;price&amp;&quot; = RP&quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

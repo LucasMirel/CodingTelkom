@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Function1"/>
+        <attribute name="authors" value="MUHAMMAD AYDIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-14 12:05:50 AM"/>
+        <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTM7MTA6Mzg6NTAgUE07MzM5Nw=="/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTQ7MTI6MDU6NTAgQU07MTszNDg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;=== WELCOME MESSAGE ===&quot;" newline="True"/>
+            <assign variable="name" expression="&quot;Kenzo Aditya&quot;"/>
+            <call expression="PrintWelcome(name)"/>
+        </body>
+    </function>
+    <function name="PrintWelcome" type="None" variable="">
+        <parameters>
+            <parameter name="name" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Welcome to Moklet Coding Club &quot;&amp;name&amp;&quot;!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

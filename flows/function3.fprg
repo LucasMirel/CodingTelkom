@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="function3"/>
+        <attribute name="authors" value="MUHAMMAD AYDIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-14 07:25:48 AM"/>
+        <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTQ7MDc6MTc6MjMgQU07MzM4Ng=="/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTQ7MDc6MjU6NDggQU07MTszNTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numberFirst, numberSecond" type="Real" array="False" size=""/>
+            <output expression="&quot;=== SUM CALCULATOR ===&quot;" newline="True"/>
+            <input variable="numberFirst"/>
+            <input variable="numberSecond"/>
+            <call expression="sumNum(numberFirst,numberSecond)"/>
+        </body>
+    </function>
+    <function name="sumNum" type="None" variable="">
+        <parameters>
+            <parameter name="sum1" type="Real" array="False"/>
+            <parameter name="sum2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="sum1+sum2"/>
+            <output expression="&quot;Calling Added Numbers (&quot;&amp;sum1&amp;&quot;, &quot;&amp;sum2&amp;&quot;)&quot;" newline="True"/>
+            <output expression="sum1&amp;&quot; + &quot;&amp;sum2&amp;&quot; = &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="function5"/>
+        <attribute name="authors" value="MUHAMMAD AYDIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-14 03:32:07 PM"/>
+        <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTQ7MDM6MjY6MTUgUE07MzM5OA=="/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTQ7MDM6MzI6MDcgUE07MTszNTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="factorNum" type="Integer" array="False" size=""/>
+            <input variable="factorNum"/>
+            <call expression="factorial(factorNum)"/>
+        </body>
+    </function>
+    <function name="factorial" type="None" variable="">
+        <parameters>
+            <parameter name="number" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="1"/>
+            <for variable="i" start="1" end="number" direction="inc" step="1">
+                <assign variable="total" expression="total*i"/>
+            </for>
+            <output expression="&quot;=== FACTORIAL CALCULATOR ===&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Calling Factorial (&quot;&amp;number&amp;&quot;)&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;number&amp;&quot;! = &quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

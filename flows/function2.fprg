@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="function2"/>
+        <attribute name="authors" value="MUHAMMAD AYDIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-14 07:17:21 AM"/>
+        <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTQ7MDc6MDk6MjEgQU07MzM4NQ=="/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTQ7MDc6MTc6MjEgQU07MTszNDky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="inputNum" type="Real" array="False" size=""/>
+            <output expression="&quot;=== SQUARE CALCULATOR ===&quot;" newline="True"/>
+            <output expression="&quot;Input Number = &quot;" newline="True"/>
+            <input variable="inputNum"/>
+            <call expression="Square(inputNum)"/>
+        </body>
+    </function>
+    <function name="Square" type="None" variable="">
+        <parameters>
+            <parameter name="number" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="squaredNum" type="Real" array="False" size=""/>
+            <assign variable="squaredNum" expression="number*number"/>
+            <output expression="&quot;Calling Square (&quot;&amp;number&amp;&quot;)&quot;" newline="True"/>
+            <output expression="number &amp; &quot; Squared is &quot;&amp;squaredNum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

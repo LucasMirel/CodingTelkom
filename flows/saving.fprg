@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="saving"/>
+        <attribute name="authors" value="MUHAMMAD AYDIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-25 10:14:41 PM"/>
+        <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMDktMjU7MTA6MDI6MjQgUE07MzQwMA=="/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMDktMjU7MTA6MTQ6NDEgUE07MTszNTEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="saving, depo, total" type="Real" array="False" size=""/>
+            <declare name="month" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter savings goal :&quot;" newline="True"/>
+            <input variable="saving"/>
+            <output expression="&quot;Enter Monthly Deposit&quot;" newline="True"/>
+            <input variable="depo"/>
+            <assign variable="total" expression="0"/>
+            <assign variable="month" expression="0"/>
+            <while expression="saving &gt; depo">
+                <assign variable="month" expression="month +1"/>
+                <assign variable="total" expression="total+depo"/>
+            </while>
+            <output expression="&quot;Months Needed : &quot;&amp;month" newline="True"/>
+            <output expression="&quot;Final total : Rp&quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

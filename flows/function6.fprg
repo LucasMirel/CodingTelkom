@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="function6"/>
+        <attribute name="authors" value="MUHAMMAD AYDIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-14 03:53:59 PM"/>
+        <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTQ7MDM6MzI6MzUgUE07MzM5Nw=="/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTQ7MDM6NTM6NTkgUE07MTszNTE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="weight, height" type="Real" array="False" size=""/>
+            <input variable="weight"/>
+            <input variable="height"/>
+            <call expression="BMI(weight, height)"/>
+        </body>
+    </function>
+    <function name="BMI" type="None" variable="">
+        <parameters>
+            <parameter name="weight" type="Real" array="False"/>
+            <parameter name="height" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="BMI" type="Real" array="False" size=""/>
+            <declare name="category" type="String" array="False" size=""/>
+            <assign variable="BMI" expression="weight/(height*height)"/>
+            <if expression="BMI &lt; 18.5">
+                <then>
+                    <assign variable="category" expression="&quot;Underweight&quot;"/>
+                </then>
+                <else>
+                    <if expression="BMI &lt; 25">
+                        <then>
+                            <assign variable="category" expression="&quot;Normal&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="BMI &lt;40">
+                                <then>
+                                    <assign variable="category" expression="&quot;Overweight&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="category" expression="&quot;Obese&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;=== BMI CATEGORY FUNCTION ===&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Calling BMICategory (&quot;&amp;weight&amp;&quot;, &quot;&amp;height&amp;&quot;)&quot;&#13;&#10;&amp;toChar(13)&amp;toChar(13)&amp;&#13;&#10;&quot;BMI Value : &quot;&amp;BMI&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Category : &quot;&amp;category" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
