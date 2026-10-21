@@ -4,23 +4,22 @@
         <attribute name="name" value="function8broke"/>
         <attribute name="authors" value="MUHAMMAD AYDIN"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2026-10-15 10:44:13 AM"/>
+        <attribute name="saved" value="2026-10-16 10:15:17 PM"/>
         <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTU7MTA6MTY6MzcgQU07MzM4NQ=="/>
-        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTU7MTA6NDQ6MTMgQU07MTszNDg4"/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTY7MTA6MTU6MTcgUE07MjszNTA3"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="quantity" type="Integer" array="False" size=""/>
-            <declare name="subTotal, ship, grandTotal, price" type="Real" array="False" size=""/>
+            <declare name="subTotal, shippingCost, grandTotal, price" type="Real" array="False" size=""/>
             <output expression="&quot;Input price and quantity&quot;" newline="True"/>
             <input variable="price"/>
             <input variable="quantity"/>
-            <call expression="CalculateSubtotal(price, quantity)"/>
-            <call expression="CalculateShipping(subTotal)"/>
-            <assign variable="ship" expression="CalculateShipping(subTotal)"/>
-            <assign variable="grandTotal" expression="subTotal+ship"/>
-            <output expression="&quot;====  ONLINE STORE INVOICE ====&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Calling CalculateSubtotal (&quot;&amp;price&amp;&quot;, &quot;&amp;quantity&amp;&quot;)&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Subtotal : Rp&quot;&amp;subTotal&#13;&#10;&amp;toChar(13)&amp;toChar(13)&amp;&#13;&#10;&quot;Calling CalculateShipping (&quot;&amp;subTotal&amp;&quot;)&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Shipping Cost : Rp&quot;&amp;ship&amp;&quot; (FREE - subtotal &gt;= Rp200,000)&quot;&#13;&#10;&amp;toChar(13)&amp;toChar(13)&amp;&#13;&#10;&quot;Grand Total : &quot;&amp;grandTotal" newline="True"/>
+            <assign variable="subTotal" expression="CalculateSubtotal (quantity, price)"/>
+            <assign variable="shippingCost" expression="CalculateShipping(subTotal)"/>
+            <assign variable="grandTotal" expression="subTotal+shippingCost"/>
+            <output expression="&quot;====  ONLINE STORE INVOICE ====&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Calling CalculateSubtotal (&quot;&amp;price&amp;&quot;, &quot;&amp;quantity&amp;&quot;)&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Subtotal : Rp&quot;&amp;subTotal&#13;&#10;&amp;toChar(13)&amp;toChar(13)&amp;&#13;&#10;&quot;Calling CalculateShipping (&quot;&amp;subTotal&amp;&quot;)&quot;&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Shipping Cost : Rp&quot;&amp;shippingCost&amp;&quot; (FREE - subtotal &gt;= Rp200,000)&quot;&#13;&#10;&amp;toChar(13)&amp;toChar(13)&amp;&#13;&#10;&quot;Grand Total : &quot;&amp;grandTotal" newline="True"/>
         </body>
     </function>
     <function name="CalculateShipping" type="Real" variable="ship">
@@ -28,8 +27,8 @@
             <parameter name="subTotal" type="Real" array="False"/>
         </parameters>
         <body>
-            <declare name="ship, subTotal" type="Real" array="False" size=""/>
-            <if expression="subTotal &lt;=200000">
+            <declare name="ship" type="Real" array="False" size=""/>
+            <if expression="subTotal &gt;=200000">
                 <then>
                     <assign variable="ship" expression="0"/>
                 </then>

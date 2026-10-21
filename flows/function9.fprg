@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="function9"/>
+        <attribute name="authors" value="MUHAMMAD AYDIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-16 10:30:15 PM"/>
+        <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTY7MTA6MTY6MTYgUE07MzM5OA=="/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTY7MTA6MzA6MTUgUE07MTszNTAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="totalCall" type="Integer" array="False" size=""/>
+            <assign variable="totalCall" expression="0"/>
+            <output expression="&quot;=== SCOPE DEMONSTRATION ===&quot;" newline="True"/>
+            <assign variable="totalCall" expression="logCall (totalCall)"/>
+            <assign variable="totalCall" expression="logCall (totalCall)"/>
+            <assign variable="totalCall" expression="logCall (totalCall)"/>
+            <output expression="toChar(13)&amp;&#13;&#10;&quot;Total Calls (global) : &quot;&amp;TotalCall" newline="True"/>
+        </body>
+    </function>
+    <function name="logCall" type="Integer" variable="totalCall">
+        <parameters>
+            <parameter name="callAmount" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="totalCall" type="Integer" array="False" size=""/>
+            <assign variable="totalCall" expression="callAmount+1"/>
+            <output expression="toChar(13)&amp;&#13;&#10;&quot;Calling LogCall() -&gt; This is call number&quot;&amp;totalCall&amp;&quot;(local)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

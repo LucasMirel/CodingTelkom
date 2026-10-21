@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="function10"/>
+        <attribute name="authors" value="MUHAMMAD AYDIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-16 10:56:57 PM"/>
+        <attribute name="created" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTY7MTA6MzA6MjMgUE07MzM5Mg=="/>
+        <attribute name="edited" value="TVVIQU1NQUQgQVlESU47TEFQVE9QLUZPTlJKSlBUOzIwMjYtMTAtMTY7MTA6NTY6NTcgUE07MTszNTE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="Name, letterGrade" type="String" array="False" size=""/>
+            <declare name="score1, score2, score3, avgGrade" type="Real" array="False" size=""/>
+            <for variable="i" start="0" end="1" direction="inc" step="1">
+                <input variable="Name"/>
+                <input variable="score1"/>
+                <input variable="score2"/>
+                <input variable="score3"/>
+                <assign variable="avgGrade" expression="calculateAvg(score1,score2,score3)"/>
+                <assign variable="letterGrade" expression="determineGrade(avgGrade)"/>
+                <call expression="PrintReport(Name, avgGrade, letterGrade, score1, score2, score3)"/>
+            </for>
+        </body>
+    </function>
+    <function name="calculateAvg" type="Real" variable="avgScore">
+        <parameters>
+            <parameter name="score1" type="Real" array="False"/>
+            <parameter name="score2" type="Real" array="False"/>
+            <parameter name="score3" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="avgScore" type="Real" array="False" size=""/>
+            <assign variable="avgScore" expression="(score1+score2+score3)/3"/>
+        </body>
+    </function>
+    <function name="determineGrade" type="String" variable="grade">
+        <parameters>
+            <parameter name="avg" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="grade" type="String" array="False" size=""/>
+            <if expression="avg &gt;=90">
+                <then>
+                    <assign variable="grade" expression="&quot;A&quot;"/>
+                </then>
+                <else>
+                    <if expression="avg&gt;=80">
+                        <then>
+                            <assign variable="grade" expression="&quot;B&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="avg&gt;=70">
+                                <then>
+                                    <assign variable="grade" expression="&quot;C&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="avg&gt;=60">
+                                        <then>
+                                            <assign variable="grade" expression="&quot;D&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="grade" expression="&quot;F&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="PrintReport" type="None" variable="">
+        <parameters>
+            <parameter name="name" type="String" array="False"/>
+            <parameter name="avg" type="Real" array="False"/>
+            <parameter name="grade" type="String" array="False"/>
+            <parameter name="score1" type="Real" array="False"/>
+            <parameter name="score2" type="Real" array="False"/>
+            <parameter name="score3" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;=== STUDENT GRADE REPORT SYSTEM ===&quot;&#13;&#10;&amp;toChar(13)&amp;toChar(13)&amp;&#13;&#10;&quot;Calling CalculateAverage (&quot;&amp;score1&amp;&quot;, &quot;&amp;score2&amp;&quot;, &quot;&amp;score3&amp;&quot;) -&gt; &quot;&amp;avg&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Calling DetermineGrade (&quot;&amp;avg&amp;&quot;) -&gt; &quot;&amp;grade&#13;&#10;&amp;toChar(13)&amp;&#13;&#10;&quot;Calling PrintReport (&quot;&amp;Name&amp;&quot;, &quot;&amp;avg&amp;&quot;, &quot;&amp;grade&amp;&quot;)&quot;&#13;&#10;&amp;toChar(13)&amp;toChar(13)&amp;&#13;&#10;Name&amp;&quot;   | Average:&quot;&amp;avg&amp;&quot; | Grade: &quot;&amp;grade" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
