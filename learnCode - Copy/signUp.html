@@ -4,25 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sign Up - LearnCode</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="signup">
 
 <h2>Welcome New User</h2>
-<p>The password must have contains special symbols, capital alphabet and also a numbers</p>
 
-<div>
-  
-  <input type="email" id="email" placeholder="Your Email">
-  <input type="text" id="username" placeholder="Make Your Username">
-  <input type="password" id="password" placeholder="Build Your Password">
-  <button id="createBtn">Create</button>
+<div class="signup-row">
+  <p class="rules">The password must have contains special symbols, capital alphabet and also a numbers</p>
 
+  <form id="signupForm" class="signup-form" novalidate>
+    <div class="field">
+      <input type="email" id="email" placeholder="Your Email">
+      <p class="err" id="emailError"></p>
+    </div>
+    <div class="field">
+      <input type="text" id="username" placeholder="Make Your Username">
+      <p class="err" id="usernameError"></p>
+    </div>
+    <div class="field">
+      <input type="password" id="password" placeholder="Build Your Password">
+      <p class="err" id="passwordError"></p>
+    </div>
+    <div class="field">
+      <input type="password" id="confirm" placeholder="Confirm Your Password">
+      <p class="err" id="confirmError"></p>
+    </div>
+    <button type="submit" id="createBtn">Create</button>
+  </form>
 </div>
 
 <p id="msg"></p>
 
-<p>Ready to enjoy Your whole journey-code with us? we will track you up with the bunch of feature we have</p>
-<button onclick="location.href='splashScreen.html'">← Back</button>
+<p class="ready">Ready to enjoy Your whole journey-code with us? we will track you up with the bunch of feature we have</p>
+<button class="back" onclick="location.href='splashScreen.html'">← Back</button>
 
 <script src="signup.js"></script>
 </body>

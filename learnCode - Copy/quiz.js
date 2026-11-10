@@ -6,12 +6,12 @@ answer.style.opacity = 0;
 
 options.forEach(opt => {
   opt.addEventListener('click', () => {
-    options.forEach(o => o.style.color = '');
+    options.forEach(o => o.classList.remove('right', 'wrong'));
 
     if (opt.dataset.k === correct) {
-      opt.style.color = 'green';
+      opt.classList.add('right');
     } else {
-      opt.style.color = 'red';
+      opt.classList.add('wrong');
     }
 
     answer.style.opacity = 1;

@@ -4,67 +4,91 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home - LearnCode</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home">
 
-<nav>
+<nav class="menu">
   <button onclick="scrollToId('mod')">Module</button>
   <button onclick="scrollToId('list')">List</button>
   <button onclick="scrollToId('quiz')">Quizz</button>
-  <button onclick="location.href='index.html'">Signout</button>
+  <button class="out" onclick="location.href='index.html'">Signout</button>
 </nav>
 
-<h2>So what you will be learning today? Pick one of them</h2>
+<div class="space small"></div>
 
-<div id="list">
-  <h3>List of Materials</h3>
-  <button class="circle">HTML</button>
-  <button class="circle">CSS</button>
-  <button class="circle">JS</button>
-  <button class="circle">PHP</button>
-  <button class="circle">Python</button>
-  <button class="circle">Java</button>
+<h2 class="ask">So what you will be learning today?<br>Pick one of them</h2>
 
-  <h4>Your Daily Routine to do Code</h4>
-  <ul>
-    <li>Task 1</li>
-    <li>Task 2</li>
-    <li>Task 3</li>
-    <li>Task 4</li>
-    <li>Task 5</li>
-    <li>Task 6</li>
-  </ul>
-</div>
+<section id="list" class="materials">
+  <h3 class="yellowbar">List of Materials</h3>
+  <div class="circles">
+    <button class="circle">HTML</button>
+    <button class="circle">CSS</button>
+    <button class="circle on">JS</button>
+    <button class="circle">PHP</button>
+    <button class="circle">Python</button>
+    <button class="circle">Java</button>
+  </div>
+  <div class="routine">
+    <h4>Your Daily Routine to do Code</h4>
+    <ul>
+      <li>Task 1</li>
+      <li>Task 2</li>
+      <li>Task 3</li>
+      <li>Task 4</li>
+      <li>Task 5</li>
+      <li>Task 6</li>
+    </ul>
+  </div>
+</section>
 
-<h2 id="mod">Module</h2>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi"</p>
+<h2 class="bar" id="mod">Module</h2>
+<div class="space small"></div>
+<section class="about">
+  <h3>Module 1: HTML Basics</h3>
+  <p>Lesson 3: Lists</p>
+  <p>An unordered list (bullet points) uses <code>&lt;ul&gt;</code>.</p>
+  <p>An ordered list (numbered) uses <code>&lt;ol&gt;</code>.</p>
+  <p>Every item inside the list uses <code>&lt;li&gt;</code>.</p>
+  <pre><code>&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</section>
+<div class="space small"></div>
 
-<div id="quiz">
-  <h3>CodeQuizz</h3>
-  <p>Feature</p>
-  <h4>How to make an unorganized list?</h4>
-
-  <button class="opt" data-k="a">a. <code>&lt;button type="button" onclick="document.getElementById('demo').innerHTML = Date()"&gt;Click me to display Date and Time.&lt;/button&gt;</code></button>
-  <button class="opt" data-k="b">b. <code>&lt;ul&gt;&lt;li&gt;Coffee&lt;/li&gt;&lt;li&gt;Tea&lt;/li&gt;&lt;li&gt;Milk&lt;/li&gt;&lt;/ul&gt;</code></button>
-  <button class="opt" data-k="c">c. <code>&lt;button type="button" onclick="document.getElementById('demo').innerHTML = Date()"&gt;Click me to display Date and Time.&lt;/button&gt;</code></button>
-
+<section id="quiz">
+  <span class="tab">CodeQuizz</span>
+  <p class="feature">Feature</p>
+  <div class="qgrid">
+    <div class="qbox">How to make an unorganized list?</div>
+    <button class="opt" data-k="a"><span class="lbl">a</span><code>&lt;button type="button" onclick="document.getElementById('demo').innerHTML = Date()"&gt;
+Click me to display Date and Time.&lt;/button&gt;</code></button>
+    <button class="opt" data-k="c"><span class="lbl">c</span><code>&lt;button type="button" onclick="document.getElementById('demo').innerHTML = Date()"&gt;
+Click me to display Date and Time.&lt;/button&gt;</code></button>
+    <button class="opt" data-k="b"><span class="lbl">b</span><code>&lt;ul&gt;
+&lt;li&gt;Coffee&lt;/li&gt;
+&lt;li&gt;Tea&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;</code></button>
+  </div>
   <p id="answer">The correct answer : B</p>
-</div>
+</section>
 
-<footer>
-  <h3>Learn Code By</h3>
-  <p>Asal sekoolaahh</p>
-  <p>Kelaaasss</p>
-  <p>Muhammad Aydin Ihsan</p>
-  <p>Nomer abseeenn</p>
+<footer class="foot">
+  <div class="credit">
+    <h3>Learn<br>Code<br>By</h3>
+    <div><p>Asal sekoolaahh</p><p>Kelaaasss</p></div>
+    <div><p>Muhammad Aydin Ihsan</p><p>Nomer abseeenn</p></div>
+  </div>
+  <nav class="menu">
+    <button onclick="scrollToId('mod')">Module</button>
+    <button onclick="scrollToId('list')">List</button>
+    <button onclick="scrollToId('quiz')">Quizz</button>
+    <button class="out" onclick="location.href='index.html'">Signout</button>
+  </nav>
 </footer>
-
-<nav>
-  <button onclick="scrollToId('mod')">Module</button>
-  <button onclick="scrollToId('list')">List</button>
-  <button onclick="scrollToId('quiz')">Quizz</button>
-  <button onclick="location.href='index.html'">Signout</button>
-</nav>
 
 <script src="scroll.js"></script>
 <script src="materials.js"></script>
