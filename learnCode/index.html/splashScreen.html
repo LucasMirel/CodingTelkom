@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LearnCode</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <button id="sign" onclick="location.href='signup.html'">Sign-up</button>
+  <button id="up" onclick="location.href='home.html'">Sign-In</button>
+  <h1 id="title">LearnCode</h1>
+  <button id="profile" aria-label="Profile">👤</button>
+</div>
+
+<h2>Want to Learn Code more faster?</h2>
+
+<div>
+  <h3>Come and learn with Us</h3>
+  <p>Check out for more feature such as Your routine Schedule, Tutorials to help You more faster to learn and also to have an exercise</p>
+</div>
+
+<div>
+  <h3>Preview</h3>
+  <p>Feature</p>
+
+  <div class="luardaftarbab">
+    <h4>daftar bab</h4>
+
+    <div class="daftarbab1">
+      <div class="bab"></div>
+      <div class="space"></div>
+      <div class="bab"></div>
+      <div class="bab"></div>
+    </div>
+    <div class="daftarbab2">
+      <div class="bab"></div>
+      <div class="bab"></div>
+      <div class="bab"></div>
+    </div>
+
+  </div>
+  <button onclick="setTheme(true)" aria-label="Dark mode"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon preview-icon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg></button>
+  <button onclick="setTheme(false)" aria-label="Light mode"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun preview-icon"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+</div>
+
+<h2>Module and Lesson</h2>
+
+<div>
+
+  <h3>Module 1: HTML Basics</h3>
+  <p>Lesson 3: Lists</p>
+
+  <p>HTML has two main kinds of lists:</p>
+  <ul>
+    <li><code>&lt;ul&gt;</code> makes an unordered list (bullet points).</li>
+    <li><code>&lt;ol&gt;</code> makes an ordered list (numbered).</li>
+  </ul>
+
+  <p>Every item inside a list goes in an <code>&lt;li&gt;</code> tag. Example:</p>
+  <pre><code>&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+  <p>Ready to test what you learned? Try the CodeQuizz below.</p>
+  
+</div>
+
+<div id="quiz">
+
+  <h3>CodeQuizz</h3>
+  <p>Feature</p>
+  <h4>How to make an unorganized list?</h4>
+
+  <button class="opt" data-k="a">a. <code>&lt;button type="button" onclick="document.getElementById('demo').innerHTML = Date()"&gt;Click me to display Date and Time.&lt;/button&gt;</code></button>
+  <button class="opt" data-k="b">b. <code>&lt;ul&gt;&lt;li&gt;Coffee&lt;/li&gt;&lt;li&gt;Tea&lt;/li&gt;&lt;li&gt;Milk&lt;/li&gt;&lt;/ul&gt;</code></button>
+  <button class="opt" data-k="c">c. <code>&lt;button type="button" onclick="document.getElementById('demo').innerHTML = Date()"&gt;Click me to display Date and Time.&lt;/button&gt;</code></button>
+
+  <p id="answer">The correct answer : B</p>
+
+</div>
+
+<h2>About Us</h2>
+<p>We build the future of website by teaching new generations of programmers a better CSS skills!</p>
+
+<footer>
+
+  <div>
+    <h3>Learn Code By Muhammad Aydin Ihsan</h3>
+    <p>SMK TELKOM MALANG</p>
+    <p>X ICP RPL</p>
+    <p>Nomer absen: 17</p>
+  </div>
+
+  <div class="navbar">
+    <button onclick="location.href='signup.html'">Signup</button>
+    <button onclick="location.href='home.html'">Login</button>
+    <strong>LearnCode</strong>
+    <button aria-label="Profile">👤</button>
+  </div>
+</footer>
+
+<script src="theme.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>
