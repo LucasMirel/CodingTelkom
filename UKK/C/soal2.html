@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Sebuah rental kendaraan ingin mencatat transaksi penyewaan dalam satu hari.
+      Setiap kali  tombol Simpan ditekan, satu transaksi dicatat,
+       kemudian seluruh transaksi ditampilkan beserta  total pendapatan. 
+    -->
+
+    <!-- nah kita membutuhkan 3 inputan lagi; kendaraan(string), lamasewa(number), tarifhari(number) -->
+    <!-- lalu kita memerlukan 1 buton untuk menyimpan data -->
+    <!-- dan memerlukan p untuk menampilkan output -->
+    <!-- dan juga p terakhir untuk men total semua total dari data diatas -->
+
+    <!-- opening -->
+    <h1>Selamat datang di penghitung rental kendaraan</h1>
+    <p>Silahkan lihat lihat !</p>
+
+    <br><br>
+    <label>Masukkan Nama Kendaraanmu: </label>
+    <input type="text" required id="kendaraan">
+
+    <br><br>
+    <label>Masukkan Berapa lama menyewa: </label>
+    <input type="number" required id="lamaSewa">
+
+    <br><br>
+    <label>Masukkan berapa tarif perharinya: </label>
+    <input type="number" required id="tarifHari">
+
+    <br><br>
+    <button id="btnSimpan">Simpan</button>
+
+    <p id="hasil">
+
+    </p>
+    <p>Total Pendapatan Rp: <b id="totalAkhir">0</b></p>
+    <p id="keterangan"></p>
+
+    <script src="Soal2.js"></script>
+</body>
+
+</html>

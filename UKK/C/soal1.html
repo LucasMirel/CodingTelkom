@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Sebuah jasa ekspedisi ingin menghitung ongkos kirim berdasarkan berat paket dan jarak tujuan
+        Tarif per kilometer berbeda pada setiap zona tujuan -->
+    <!-- • Ongkos kirim = (berat × 3.000) + (jarak × tarif per km) -->
+    <!-- atb html yang diperlukan -->
+    <!-- 3 input yaitu; nama, berat(kg), jarak(km)  -->
+    <!-- perlu 1 button hitung dan outputnya -->
+
+    <!-- opening -->
+    <h1>Selamat datang di penghitung ongkos</h1>
+    <p>Silahkan masukkan nama pengirim, berat barang, dan juga jarak pengiriman</p>
+
+    <br><br>
+    <label>Masukkan nama Pengirim: </label>
+    <input type="text" required placeholder="Masukkan Nama" id="nama">
+
+    <br><br>
+    <label>Masukkan berat barang (kg): </label>
+    <input type="number" required placeholder="Masukkan berat(kg)" id="berat">
+
+    <br><br>
+    <label>Masukkan jarak tujuan(km): </label>
+    <input type="number" required placeholder="Masukkan jarak tujuan (km)" id="jarak">
+
+    <br><br>
+    <button id="btnHitung">Hitung</button>
+    <label id="keterangan"></label>
+
+    <div id="output">
+
+    </div>
+
+    <script src="Soal1.js"></script>
+</body>
+
+</html>
