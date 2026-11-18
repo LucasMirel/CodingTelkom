@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slip Gaji Karyawan</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Slip Gaji Karyawan</h1>
+        <form id="ID" class="IDForm" novalidate>
+            <div class="form-group">
+                <input type="text" id="ID" name="ID" placeholder="Masukkan Nama Karyawan" required>
+                <p class="err" id="nameError"></p>
+            </div>
+            <div class="gajiPokok" id="gajiPokok">
+                <input type="number" id="gajiPokok" name="rawPaycheck" placeholder="Masukkan Gaji Pokok" required>
+                <p class="err" id="rawPaycheckError"></p>
+            </div>
+            <div class="jamLembur" id="jamLembur">
+                <input type="number" id="jamLembur" name="jamLembur" placeholder="Masukkan Jam Lembur" required>
+                <p class="err" id="jamLemburError"></p>
+            </div>
+            <div class="hariAbsen" id="hariAbsen">
+                <input type="number" id="hariAbsen" name="hariAbsen" placeholder="Masukkan Hari Absen" required>
+                <p class="err" id="hariAbsenError"></p>
+            </div>
+            <div class="btnCount">
+                <button type="submit" id="btnCount">Hitung Gaji</button>
+            </div>
+        </form>
+    </div>
+
+    <p id="msg"></p>
+
+    <footer class="foot">
+        <div class="credit">
+            <p>Created by <a href="https://github.com/LucasMirel" target="_blank">Lucas Mirel</a></p>
+        </div>
+        <div class="bottombar">
+            <button class="chip light" onclick="location.href='resultGaji.html'">Second Page</button>
+        </div>
+    </footer>
+
+    <script src="hitungGaji.js"></script>
+</body>
+</html>
