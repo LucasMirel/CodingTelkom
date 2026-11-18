@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- jadi ada toko -->
+    <!-- nah ada sistem penghitungan gaji -->
+    <!-- nah cara nya yaitu (25000 * jam)- (100000*hari absen) -->
+    <!-- diperlukan 4 input yaitu -->
+    <!-- nama, gaji pokok (gaji tetapnya), jam lembur (nilai ++), hari absen(nilai --) -->
+    <!-- Gaji bersih = gaji pokok + (jam lembur × 25.000) − (hari absen × 100.000)  -->
+    <!-- akan ada validasi yang dengan basis sistem if else -->
+    <!-- angka berisi -(maka harus >= 0) -->
+    <!-- akan ada predikat berupa -->
+    <!-- if else yaitu -->
+    <!-- hari absen 0 == sangat disiplin -->
+    <!-- hari absen 1-2 disiplin -->
+    <!-- hari absen 3-4  cukup disiplin-->
+    <!-- kurang disiplin -->
+    <!-- >6 perlu pembinaan -->
+    <!-- dan untuk membuat semua var berfungsi diperlukan 1 button yaitu -->
+    <!-- button hitung -->
+    <!-- lalu akan ada output dari memencet buton hitung -->
+
+    <!-- opening -->
+    <h1>Selamat datang di penghitung gaji</h1>
+    <p>Coba dan lihatlihatlah!</p>
+
+    <!-- buat inputnya satu persatu, lau nanti ambil valuenya -->
+    <label>Masukkan nama:</label>
+    <input type="text" required placeholder="Masukkan nama" id="inputNama">
+    <br><br>
+
+    <label>Masukkan gaji pokok:</label>
+    <input type="number" required placeholder="Masukkan gaji pokok" id="inputGajiPokok">
+
+    <br><br>
+    <label>Masukkan jam lembur:</label>
+    <input type="number" required placeholder="Masukkan jam lembur" id="inputJamLembur">
+
+    <br><br>
+    <label>Masukkan hari absen:</label>
+    <input type="number" required placeholder="Masukkan hari absen" id="inputHariAbsen">
+
+
+    <!-- nah taruh tombolnya disini sebelum keterangannya -->
+    <button id="buttonHitung">Hitung</button>
+    <hr>
+
+    <!-- nah disini untuk outputnya -->
+    <div id="output">
+
+    </div>
+
+    <script src="soal1.js"></script>
+
+</body>
+
+</html>
