@@ -1,3 +1,4 @@
+"use strict";
 // // 1. Hubungkan semua elemen HTML pada tabel di atas ke TypeScript dengan
 // document.getElementById(), kemudian tentukan tipe elemennya (HTMLInputElement
 // untuk kolom isian, HTMLButtonElement untuk tombol, serta HTMLElement atau
@@ -15,56 +16,56 @@
 // Tampilkan pesan: Error: Suhu tidak valid.
 // 7. Jalankan function prosesSuhu ketika tombol btnProses diklik dengan menggunakan
 // addEventListener.
-
 // Number 1 Connecting HTML elements to TypeScript
-const cityNameInput = document.getElementById('cityName') as HTMLInputElement;
-const morningTempInput = document.getElementById('celsiusInputMorning') as HTMLInputElement;
-const afternoonTempInput = document.getElementById('celsiusInputEvening') as HTMLInputElement;
-
-const btnProses = document.getElementById('calculate') as HTMLButtonElement;
-
-const display = document.getElementById('display') as HTMLElement;
-const output = document.getElementById('output') as HTMLElement;
-
+const cityNameInput = document.getElementById('cityName');
+const morningTempInput = document.getElementById('celsiusInputMorning');
+const afternoonTempInput = document.getElementById('celsiusInputEvening');
+const btnProses = document.getElementById('calculate');
+const display = document.getElementById('display');
+const output = document.getElementById('output');
 // Number 2 Function to process temperature
-function temperatureProcess(): void {
-
+function temperatureProcess() {
     // Number 3 Get values from input fields and convert to numbers
     const cityName = cityNameInput.value;
     const morningTemp = Number(morningTempInput.value);
     const afternoonTemp = Number(afternoonTempInput.value);
-
     // Number 4 Calculate average temperature and convert to Fahrenheit
     const averageTemp = (morningTemp + afternoonTemp) / 2;
     const fahrenheitTemp = averageTemp * 9 / 5 + 32;
-
     display.innerHTML = "";
     output.innerHTML = "";
-
     // Number 5 Determine temperature category
     let category = '';
-    if (averageTemp >= 0 && averageTemp < 15) {
+    if (averageTemp >= 0 && averageTemp < 15 && fahrenheitTemp <= 32) {
         category = "Cold";
-    } else if (averageTemp >= 15 && averageTemp < 25) {
+    }
+    else if (averageTemp >= 15 && averageTemp < 25 || fahrenheitTemp <= 32) {
         category = "warm";
-    } else if (averageTemp >= 25 && averageTemp < 32) {
+    }
+    else if (averageTemp >= 25 && averageTemp < 32 || fahrenheitTemp <= 32) {
         category = "Moderate";
-    } else if (averageTemp >= 32 && averageTemp < 38) {
+    }
+    else if (averageTemp >= 32 && averageTemp < 38 || fahrenheitTemp <= 32) {
         category = "Warm";
-    } else if (averageTemp <= 50) {
+    }
+    else if (averageTemp <= 50 || fahrenheitTemp <= 32) {
         category = "Hot";
-    } else {
+    }
+    else {
         // Number 6 Handle invalid temperature range
         display.innerHTML = "Error: Temperature is not valid.";
         return;
     }
-
-    output.innerHTML = `
+    if (averageTemp <= 0 || fahrenheitTemp <= 32 || cityName == '') {
+        output.innerHTML = `Invalid`;
+    }
+    else {
+        output.innerHTML = `
         <p>City Name: ${cityName}</p>
         <p>Average Temperature: ${averageTemp.toFixed(2)} °C / ${fahrenheitTemp.toFixed(2)} °F</p>
         <p>Category: ${category}</p>
     `;
+    }
 }
-
 // Number 7 Add event listener to the button
 btnProses.addEventListener('click', temperatureProcess);

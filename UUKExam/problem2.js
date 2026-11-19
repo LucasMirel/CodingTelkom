@@ -26,7 +26,7 @@ const distance = document.getElementById('Length');
 const bbm = document.getElementById('Consumption');
 const saveBtn = document.getElementById('Save');
 const result = document.getElementById('result');
-const Display = document.getElementById('display');
+let Display = document.getElementById('display');
 // Number 2 creating empty arrays
 const vahicleform = [];
 const distanceform = [];
@@ -49,13 +49,20 @@ function calculateFuelConsumption() {
 function displayResults() {
     Display.innerHTML = '';
     for (let i = 0; i < vahicleform.length; i++) {
-        Display.innerHTML += `
+        if (vahicleform[i] == '') {
+            if (distanceform[i] == 0) {
+                Display.innerHTML = 'Not valid';
+            }
+        }
+        else {
+            Display.innerHTML += `
             Armada: ${vahicleform[i]} <br>
             Distance : ${distanceform[i]} km <br>
             Consumption : ${bbmform[i]} km/liter <br>
             BBM: ${literform[i]} liter <br>
             <br>
         `;
+        }
     }
     result.innerHTML = `<b>Total BBM: ${calculateFuelConsumption()} liter</b>`;
 }
@@ -75,6 +82,7 @@ function resetInput() {
     vehicle.value = '';
     distance.value = '';
     bbm.value = '';
+    Display.value = '';
 }
 // Number 6 adding event listener to save button
 saveBtn.addEventListener('click', saveData);
