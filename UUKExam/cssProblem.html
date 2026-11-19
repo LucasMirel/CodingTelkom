@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aydien Curriculum Vitae</title>
+    <link rel="stylesheet" href="cssProblem.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <h3>Muhammad Aydin Ihsan</h3>
+  <button class="chip" onclick="location.href='cssProblem.html'">Page 1</button>
+  <button class="chip" onclick="location.href='cssProblem.html'">Page 2</button>
+  <button class="chip" onclick="location.href='cssProblem.html'">Page 3</button>
+        
+    </div>
+
+    <section id="profil">
+ <img src="https://i.pinimg.com/736x/2c/e4/14/2ce414e6df26ea832ec9468a53941e24.jpg" alt="Profile Picture">
+ </a>
+
+    <div class="info">
+        <h1>Muhammad Aydin Ihsan</h1>
+        <p class="role">Role: Siswa RPL / Web Developer</p>
+        <p class="bio">Short description about yourself here.</p>
+        <a href="cssProblem.pdf" download class="btn">Download CV</a>
+    </div>
+</section>
+    
+    <section class="skills">
+        <span class="tab">Skills</span>
+        <div class="skill-row">
+            <div class="chapters">
+                <ul>
+                    <li>Skill 1</li>
+                    <li>Skill 2</li>
+                    <li>Skill 3</li>
+                    <li>Skill 4</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="project">
+        <span class="tab">Projects</span>
+        <div class="projectchap">
+                <ul>
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                    <li>Project 3</li>
+                    <li>Project 4</li>
+                </ul>
+            </div>
+    </section>
+
+    <section id="contacts">
+    <form id="formContact">
+
+        <div class="row">
+            <label for="name">Name</label>
+            <div class="field">
+                <input type="text" id="name">
+                <p class="error" id="errName"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="email">Email</label>
+            <div class="field">
+                <input type="email" id="email">
+                <p class="error" id="errEmail"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="needs">Needs</label>
+            <div class="field">
+                <select id="needs">
+                    <option value="">- Choose -</option>
+                    <option value="Question">Question</option>
+                    <option value="Cooperation">Cooperation</option>
+                    <option value="Other">Other</option>
+                </select>
+                <p class="error" id="errNeeds"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Feedback</label>
+            <div class="field">
+                <div class="radios">
+                    <label><input type="radio" name="kesan" value="Good"> Good</label>
+                    <label><input type="radio" name="kesan" value="Decent"> Decent</label>
+                    <label><input type="radio" name="kesan" value="Need a redo"> Need a redo</label>
+                </div>
+                <p class="error" id="errKesan"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="message">Message</label>
+            <div class="field">
+                <textarea id="message" rows="3"></textarea>
+                <p class="error" id="errMessage"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <span></span>
+            <div class="field">
+                <button type="submit" id="btnKirim">Submit</button>
+            </div>
+        </div>
+
+    </form>
+</section>
+
+<section id="guest">
+    <h2>Guest message</h2>
+    <p id="pesanKosong">No messages yet.</p>
+    <ul id="daftarTamu"></ul>
+</section>
+
+<footer>
+    &copy; Copyright 2024 Muhammad Aydin Ihsan · Aydien_@gmail.com
+</footer>
+
+</body>
+</html>
