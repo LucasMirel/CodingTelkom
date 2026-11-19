@@ -78,6 +78,9 @@ code, pre {font-family: Consolas, "Courier New", monospace; }
     font-size: 14px;
 }
 
+#profil .btn:hover {
+    color: red;
+}
 .bar {
     background: var(--blue);
     color: #fff;
@@ -262,6 +265,10 @@ code, pre {font-family: Consolas, "Courier New", monospace; }
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
+}
+
+#btnKirim:hover {
+    color: var(--pale);
 }
 
 /* Guest section */

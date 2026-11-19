@@ -37,6 +37,7 @@ function temperatureProcess(): void {
     // Number 4 Calculate average temperature and convert to Fahrenheit
     const averageTemp = (morningTemp + afternoonTemp) / 2;
     const fahrenheitTemp = averageTemp * 9 / 5 + 32;
+    const Kelfin = averageTemp + 273
 
     display.innerHTML = "";
     output.innerHTML = "";
@@ -64,7 +65,7 @@ function temperatureProcess(): void {
 } else {
     output.innerHTML = `
         <p>City Name: ${cityName}</p>
-        <p>Average Temperature: ${averageTemp.toFixed(2)} °C / ${fahrenheitTemp.toFixed(2)} °F</p>
+        <p>Average Temperature: ${averageTemp.toFixed(2)} °C / ${fahrenheitTemp.toFixed(2)} °F / ${Kelfin.toFixed(2)} °K</p>
         <p>Category: ${category}</p>
     `;
 }

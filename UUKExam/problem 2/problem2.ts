@@ -42,8 +42,8 @@ function calculateBMMConsumption(distance: number, consumption: number): number 
     return Math.round((distance / consumption) * 100) / 100;
 }
 
-function calculateFuelConsumption() {
-    let fueltotal = 0;
+function calculateFuelConsumption() : number  {
+    let fueltotal : number = 0;
     for (let i = 0; i < literform.length; i++) {
         fueltotal += literform[i];
     }
@@ -77,7 +77,7 @@ function displayResults() {
 
 
 // Number 4 creating saveData function
-function saveData() {
+function saveData() :void {
     vahicleform.push(vehicle.value);
     distanceform.push(Number(distance.value));
     bbmform.push(Number(bbm.value));
