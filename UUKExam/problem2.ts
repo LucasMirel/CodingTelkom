@@ -27,7 +27,7 @@ const bbm = document.getElementById('Consumption') as HTMLInputElement;
 
 const saveBtn = document.getElementById('Save') as HTMLButtonElement;
 
-const result = document.getElementById('Result') as HTMLParagraphElement;
+const result = document.getElementById('result') as HTMLParagraphElement;
 const Display = document.getElementById('display') as HTMLParagraphElement;
 
 // Number 2 creating empty arrays
@@ -38,10 +38,8 @@ const literform : number[] = [];
 
 // Number 3 creating functions
 function calculateBMMConsumption(distance: number, consumption: number): number {
-    let total = 0;
-    return (total = distance + consumption);
-    Math.round(total * 100) / 100;
-
+    if (consumption === 0) return 0;
+    return Math.round((distance / consumption) * 100) / 100;
 }
 
 function calculateFuelConsumption() {
@@ -53,27 +51,22 @@ function calculateFuelConsumption() {
     return fueltotal;
 }
 
-function dispalyResults() {
+// Number 4 creating displayResults function
+function displayResults() {
     Display.innerHTML = '';
-   
+
     for (let i = 0; i < vahicleform.length; i++) {
-        Display.innerHTML =''
- 
         Display.innerHTML += `
-        <br>
-        Vehicle: ${vahicleform[i]} <br>
-        Distance: ${distanceform[i]} <br>
-        Consumption: ${bbmform[i]} <br>
-        Fuel Consumption: ${literform[i]} <br>
-        <br>
-        <hr>
-      
+            Armada: ${vahicleform[i]} <br>
+            Distance : ${distanceform[i]} km <br>
+            Consumption : ${bbmform[i]} km/liter <br>
+            BBM: ${literform[i]} liter <br>
+            <br>
         `;
-
-        result.innerHTML = `Total Fuel Consumption: ${calculateFuelConsumption()}`;
     }
-}
 
+    result.innerHTML = `<b>Total BBM: ${calculateFuelConsumption()} liter</b>`;
+}
 
 
 // Number 4 creating saveData function
@@ -86,7 +79,7 @@ function saveData() {
     const fuelConsumption = calculateBMMConsumption(distanceform[index], bbmform[index]);
     literform.push(fuelConsumption);
 
-    dispalyResults();
+    displayResults();
     resetInput();
 }
 

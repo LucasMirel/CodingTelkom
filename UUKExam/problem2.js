@@ -1,5 +1,5 @@
 "use strict";
-// // Hubungkan semua elemen HTML pada tabel di atas ke TypeScript dengan
+// Hubungkan semua elemen HTML pada tabel di atas ke TypeScript dengan
 // document.getElementById(), kemudian tentukan tipe elemennya (HTMLInputElement
 // untuk kolom isian, HTMLButtonElement untuk tombol, serta HTMLElement atau
 // HTMLParagraphElement untuk tempat hasil).
@@ -20,20 +20,23 @@
 // selesai, tampilkan juga total kebutuhan BBM.
 // 6. Jalankan function simpanData ketika tombol btnSimpan diklik dengan menggunakan
 // addEventListener.
+// Number 1 connecting HTML elements to TypeScript
 const vehicle = document.getElementById('Vehicle');
 const distance = document.getElementById('Length');
 const bbm = document.getElementById('Consumption');
 const saveBtn = document.getElementById('Save');
-const result = document.getElementById('Result');
+const result = document.getElementById('result');
 const Display = document.getElementById('display');
+// Number 2 creating empty arrays
 const vahicleform = [];
 const distanceform = [];
 const bbmform = [];
 const literform = [];
+// Number 3 creating functions
 function calculateBMMConsumption(distance, consumption) {
-    let total = 0;
-    return (total = distance + consumption);
-    Math.round(total * 100) / 100;
+    if (consumption === 0)
+        return 0;
+    return Math.round((distance / consumption) * 100) / 100;
 }
 function calculateFuelConsumption() {
     let fueltotal = 0;
@@ -42,28 +45,21 @@ function calculateFuelConsumption() {
     }
     return fueltotal;
 }
-function dispalyResults() {
+// Number 4 creating displayResults function
+function displayResults() {
     Display.innerHTML = '';
     for (let i = 0; i < vahicleform.length; i++) {
-        Display.innerHTML = '';
         Display.innerHTML += `
-        <br>
-        Vehicle: ${vahicleform[i]} <br>
-        Distance: ${distanceform[i]} <br>
-        Consumption: ${bbmform[i]} <br>
-        Fuel Consumption: ${literform[i]} <br>
-        <br>
-        <hr>
-      
+            Armada: ${vahicleform[i]} <br>
+            Distance : ${distanceform[i]} km <br>
+            Consumption : ${bbmform[i]} km/liter <br>
+            BBM: ${literform[i]} liter <br>
+            <br>
         `;
-        result.innerHTML = `Total Fuel Consumption: ${calculateFuelConsumption()}`;
     }
+    result.innerHTML = `<b>Total BBM: ${calculateFuelConsumption()} liter</b>`;
 }
-function resetInput() {
-    vehicle.value = '';
-    distance.value = '';
-    bbm.value = '';
-}
+// Number 4 creating saveData function
 function saveData() {
     vahicleform.push(vehicle.value);
     distanceform.push(Number(distance.value));
@@ -71,7 +67,14 @@ function saveData() {
     const index = vahicleform.length - 1;
     const fuelConsumption = calculateBMMConsumption(distanceform[index], bbmform[index]);
     literform.push(fuelConsumption);
-    dispalyResults();
+    displayResults();
     resetInput();
 }
+// Number 5 creating resetInput function
+function resetInput() {
+    vehicle.value = '';
+    distance.value = '';
+    bbm.value = '';
+}
+// Number 6 adding event listener to save button
 saveBtn.addEventListener('click', saveData);
