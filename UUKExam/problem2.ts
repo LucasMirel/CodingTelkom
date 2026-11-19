@@ -50,7 +50,7 @@ function calculateFuelConsumption() {
 
     return fueltotal;
 }
-
+ 
 // Number 4 creating displayResults function
 function displayResults() {
     Display.innerHTML = '';
