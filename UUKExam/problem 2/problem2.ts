@@ -1,4 +1,4 @@
-// // Hubungkan semua elemen HTML pada tabel di atas ke TypeScript dengan
+// Hubungkan semua elemen HTML pada tabel di atas ke TypeScript dengan
 // document.getElementById(), kemudian tentukan tipe elemennya (HTMLInputElement
 // untuk kolom isian, HTMLButtonElement untuk tombol, serta HTMLElement atau
 // HTMLParagraphElement untuk tempat hasil).
@@ -20,6 +20,7 @@
 // 6. Jalankan function simpanData ketika tombol btnSimpan diklik dengan menggunakan
 // addEventListener.
 
+// Number 1 connecting HTML elements to TypeScript
 const vehicle = document.getElementById('Vehicle') as HTMLInputElement;
 const distance = document.getElementById('Length') as HTMLInputElement;
 const bbm = document.getElementById('Consumption') as HTMLInputElement;
@@ -29,11 +30,13 @@ const saveBtn = document.getElementById('Save') as HTMLButtonElement;
 const result = document.getElementById('Result') as HTMLParagraphElement;
 const Display = document.getElementById('display') as HTMLParagraphElement;
 
+// Number 2 creating empty arrays
 const vahicleform : string[] = [];
 const distanceform : number[] = [];
 const bbmform : number[] = [];
 const literform : number[] = [];
 
+// Number 3 creating functions
 function calculateBMMConsumption(distance: number, consumption: number): number {
     let total = 0;
     return (total = distance + consumption);
@@ -71,12 +74,9 @@ function dispalyResults() {
     }
 }
 
-function resetInput() {
-    vehicle.value = '';
-    distance.value = '';
-    bbm.value = '';
-}
 
+
+// Number 4 creating saveData function
 function saveData() {
     vahicleform.push(vehicle.value);
     distanceform.push(Number(distance.value));
@@ -90,4 +90,12 @@ function saveData() {
     resetInput();
 }
 
+// Number 5 creating resetInput function
+function resetInput() {
+    vehicle.value = '';
+    distance.value = '';
+    bbm.value = '';
+}
+
+// Number 6 adding event listener to save button
 saveBtn.addEventListener('click', saveData);
