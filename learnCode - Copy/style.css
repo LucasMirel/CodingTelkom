@@ -470,3 +470,81 @@ body.signup {
   color: #fff;
   text-decoration: underline;
 }
+
+/* ---SignIn Form--- */
+body.signIn {
+  background: var(--navy);
+  color: #fff;
+  padding: 56px 14px 40px;
+  text-align: center;
+}
+.signIn h2 { font-size: 32px; }
+.signIn-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+.rules {
+  flex: 0 0 74px;
+  font-size: 9px;
+  line-height: 1.3;
+  text-align: left;
+}
+.signIn-form {
+  flex: 1;
+  background: var(--blue);
+  border-radius: 22px;
+  padding: 16px;
+}
+.fieldIn { margin-bottom: 12px; }
+.signIn-form input {
+  width: 100%;
+  background: var(--yellow);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font: inherit;
+  font-weight: 700;
+  font-size: 13px;
+}
+.signIn-form input::placeholder { color: #fff; opacity: 1; }
+.err { display: none; }
+.err:not(:empty) {
+  display: block;
+  margin-top: 5px;
+  background: #d64545;
+  color: #fff;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+#createBtn {
+  display: block;
+  margin: 6px auto 0;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px 28px;
+  font-weight: 700;
+}
+#msg { margin: 14px auto 0; width: fit-content; }
+#msg:not(:empty) {
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+#msg.ok { background: #1faa59; }
+#msg.bad { background: #d64545; }
+.ready { margin: 22px auto 0; max-width: 320px; font-size: 11px; line-height: 1.5; }
+.back {
+  display: block;
+  margin: 16px auto 0;
+  background: none;
+  color: #fff;
+  text-decoration: underline;
+}

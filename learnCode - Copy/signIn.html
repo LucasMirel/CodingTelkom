@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - LearnCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="signIn">
+    
+<h2>Welcome back User!</h2>
+
+<div class="signIn-row">
+    <p class="rules">The password must have contains special symbols, capital alphabet and also a numbers</p>
+
+   <form id="signInForm" class="signIn-form" novalidate>
+        <div class="fieldIn">
+            <input type="email" id="email" placeholder="Input your Email">
+            <p class="err" id="emailError"></p>
+        </div>
+        <div class="fieldIn">
+            <input type="text" id="username" placeholder="Input Your Username">
+            <p class="err" id="usernameError"></p>
+        </div>
+        <div class="fieldIn">
+            <input type="password" id="password" placeholder="Input your password">
+            <p class="err" id="passwordError"></p>
+        </div>
+        <button type="submit" id="createBtn">Confirm</button>
+  </form>
+</div>
+
+<p id="msg"></p>
+
+<p class="ready">Ready to enjoy Your whole journey-code with us? we will track you up with the bunch of feature we have</p>
+<button class="back" onclick="location.href='splashScreen.html'">← Back</button>
+
+<script src="signIn.js"></script>
+</body>
+</html>
