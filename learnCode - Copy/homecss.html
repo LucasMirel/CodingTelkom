@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home - LearnCode</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+
+<nav class="menu">
+  <button onclick="scrollToId('mod')">Module</button>
+  <button onclick="scrollToId('list')">List</button>
+  <button onclick="scrollToId('quiz-css')">Quizz</button>
+  <button class="out" onclick="location.href='signUp.html'">Signout</button>
+</nav>
+
+<div class="space small"></div>
+
+<h2 class="ask">So what you will be learning today?<br>Pick one of them</h2>
+
+<section id="list" class="materials">
+  <h3 class="yellowbar">List of Materials</h3>
+  <div class="circles">
+    <button class="circle">HTML</button>
+    <button class="circle">CSS</button>
+    <button class="circle on">JS</button>
+    <button class="circle">PHP</button>
+    <button class="circle">Python</button>
+    <button class="circle">Java</button>
+  </div>
+  <div class="routine">
+    <h4>Your Daily Routine to do Code</h4>
+    <ul>
+      <li>Task 1</li>
+      <li>Task 2</li>
+      <li>Task 3</li>
+      <li>Task 4</li>
+      <li>Task 5</li>
+      <li>Task 6</li>
+    </ul>
+  </div>
+</section>
+
+<h2 class="bar" id="mod-css">Module</h2>
+<div class="space small"></div>
+
+<section class="about">
+  <h3>Module 2: CSS Basics</h3>
+  <p>Lesson 1: Selectors and Colors</p>
+  <p>A <strong>selector</strong> chooses which HTML elements to style.</p>
+  <p>The <code>color</code> property changes text color, and <code>background-color</code> changes the background.</p>
+  <p>Use <code>.name</code> for a class and <code>#name</code> for an id.</p>
+  <pre><code>p {
+  color: blue;
+  background-color: yellow;
+}
+.title {
+  font-size: 24px;
+}</code></pre>
+</section>
+<div class="space small"></div>
+
+<section id="quiz-css">
+  <span class="tab">CodeQuizz</span>
+  <p class="feature">Feature</p>
+  <div class="qgrid">
+    <div class="qbox">Which CSS property changes the text color?</div>
+    <button class="opt" data-k="a"><span class="lbl">a</span><code>&lt;font-color</code></button>
+    <button class="opt" data-k="b"><span class="lbl">b</span><code>&lt;color</code></button>
+    <button class="opt" data-k="c"><span class="lbl">c</span><code>&lt;text-style</code></button>
+  </div>
+</section>
+
+<section id="quiz-css"    data-answer="b"> ... </section>
+
+<footer class="foot">
+  <div class="credit">
+    <h3>Learn<br>Code<br>By</h3>
+    <div><p>SMK Telkom Malang</p><p>@smktelkommalang</p></div>
+    <div><p>The LearnCode Team</p><p>@learncode</p></div>
+  </div>
+  <nav class="menu">
+    <button onclick="scrollToId('mod')">Module</button>
+    <button onclick="scrollToId('list')">List</button>
+    <button onclick="scrollToId('quiz')">Quizz</button>
+    <button class="out" onclick="location.href='signUp.html'">Signout</button>
+  </nav>
+</footer>
+
+<script src="scroll.js"></script>
+<script src="materials.js"></script>
+<script src="quiz.js"></script>
+
+</body>
+</html>
